@@ -1,0 +1,33 @@
+{
+  "name": "learncycle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "js": "browserify -o examples/bundle.js -t [ babelify --presets [ latest ] ]",
+    "ex1": "npm run js -- -e src/app.js",
+    "watch": "watchify -o examples/bundle.js -t [ babelify --presets [ latest ] ]",
+    "live": "live-server examples",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shaopeng Zhang",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "live-server": "^1.1.0",
+    "watch": "^1.0.1",
+    "watchify": "^3.8.0"
+  },
+  "dependencies": {
+    "@cycle/dom": "^14.3.0",
+    "@cycle/http": "^11.2.0",
+    "@cycle/rxjs-run": "^3.3.0",
+    "@cycle/xstream-run": "^4.2.0",
+    "rx": "^4.1.0",
+    "rxjs": "^5.0.2",
+    "xstream": "^9.3.0"
+  }
+}
